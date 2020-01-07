@@ -1,12 +1,13 @@
 import React from 'react';
 
+/* Functional component */
 const CartItem = ({product, quantity}) => {
     return (
-        <div class="list-group-item">
-            <div class="row">
-                <div class="col-md-8">{product.name}</div>
-                <div class="col-md-2">${product.priceInCents}</div>
-                <div class="col-md-2">{quantity}</div>
+        <div className="list-group-item">
+            <div className="row">
+                <div className="col-md-8">{product.name}</div>
+                <div className="col-md-2">${product.priceInCents}</div>
+                <div className="col-md-2">{quantity}</div>
             </div>
         </div>
     )
