@@ -2,6 +2,7 @@ import React from 'react';
 import Item from './CartItem';
 import AddItem from '../add_item/AddItem';
 
+
 /* Functional component */
 const CartItems = ({addToCart, itemsInCart, productList  }) => {
     return (
@@ -18,7 +19,14 @@ const CartItems = ({addToCart, itemsInCart, productList  }) => {
                 { itemsInCart.map( (item, i) => <Item key={ i } product={ item.product } quantity={ item.quantity } />) }
             </div>
 
-            <h1> Add to Cart</h1>
+            <div className="row">
+                <div className="col"><br />
+                   <strong>Total Price: ${ itemsInCart.map( item => (item.product.priceInCents * item.quantity) )
+                    .reduce( (total, num) => total+num ).toFixed(2) }</strong>
+                </div>
+            </div>
+            <br />
+            <h1>Add to Cart</h1>
             <div className="row">
                 <div className="col">
                     <AddItem addToCart={ addToCart} shoppingList={ itemsInCart } products={ productList } />

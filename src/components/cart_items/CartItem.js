@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 /* Functional component */
 const CartItem = ({product, quantity}) => {
     return (
