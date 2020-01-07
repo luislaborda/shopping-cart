@@ -26,11 +26,10 @@ export default class App extends React.Component {
   }
 
   addCartItem = (item) => {
-    // console.log(item);
     this.setState({
         cartItemsList: this.state.cartItemsList.concat(item)  
     })
-}
+  }
   
   render () {
     return (
